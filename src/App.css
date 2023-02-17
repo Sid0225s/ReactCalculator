@@ -1,1 +1,52 @@
-
+body {
+  margin: 0;
+  background: linear-gradient(
+    to right,
+    rgb(38, 34, 34),
+    rgb(38, 209, 201),
+    rgb(255, 47, 0)
+  );
+}
+#root {
+  display: flex;
+  justify-content: center;
+}
+.calc-grid {
+  display: grid;
+  margin-top: 2rem;
+  width: 20rem;
+  border: solid 4px black;
+  border-radius: 0.5rem;
+  grid-template-columns: repeat(4, 5rem);
+  grid-template-rows: minmax(6rem, auto) repeat(5, 5rem);
+}
+.span2 {
+  grid-column: span 2;
+}
+.output {
+  grid-column: 1/-1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  font-size: 2.5rem;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output .previous {
+  color: white;
+}
+.output .current {
+  color: white;
+}
+.calc-grid button {
+  font-size: 2rem;
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.calc-grid button:hover,
+.calc-grid button:focus {
+  background-color: rgba(255, 255, 255, 0.7);
+}
